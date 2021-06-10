@@ -25,7 +25,7 @@ header > h3{
 
 input{
         margin-top: 20px;
-        margin-left:20px;
+        margin-left:2wh;
         border-style: none;
         outline: none;
         border-radius: 1rem;
@@ -37,7 +37,7 @@ input{
 .addBtn {
   padding: 10px;
   margin-top: 20px;
-  margin-right: 30px;
+  margin-right: 2rem;
   width: 25%;
   background: rgba(108, 178, 236, 0.556);
   color: #fff;;
