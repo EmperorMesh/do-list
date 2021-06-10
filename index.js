@@ -20,7 +20,7 @@ list.addEventListener('click', (ev) => {
         ev.target.classList.toggle('checked');
     }
 }, false);
-creatElement = () => {
+creatElements = () => {
     const li = document.createElement("li");
     const inputValue = document.getElementById("myInput").value;
     const text = document.createTextNode(inputValue);
