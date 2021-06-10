@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOList</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="styles.css">
+</head>
+  <body>
+      <header><h3> Welcome Todo List</h3></header>
+      <div id="box"class="box1">
+          <input type="text" id="myInput" placeholder="Please Add a List"><span Onclick=" creatElement() " class="addBtn">Add List</span>
+      </div>
+      <div class="box2">
+        <ul id="list">
+           
+          </ul>
+          <span   id="clear" class="addbtn">CLEAR</span> <span  class="addbbtn">DELETE</span>   
+      </div>
+     <footer>
+         copyright@2021
+     </footer>
+     <script>
+        const myNodelist = document.getElementsByTagName("LI");
+        for (var i = 0; i < myNodelist.length; i++) {
+          const span = document.createElement("SPAN");
+          const txt = document.createTextNode("\u00D7");
+          span.className = "close"; 
+          span.appendChild(txt);
+          myNodelist[i].appendChild(span);
+        }
+        const close = document.getElementsByClassName("close");
+        for (var i = 0; i < close.length; i++) {
+          close[i].onclick =()=>{
+            var div = this.parentElement;
+            div.style.display = "none";
+          }
+        }
+
+        const list = document.querySelector('ul');
+        list.addEventListener('click', (ev)=>{
+          if (ev.target.tagName === 'LI') {
+            ev.target.classList.toggle('checked');
+          }
+        }, false);
+         creatElement=()=>{
+        const li = document.createElement("li");
+        const inputValue = document.getElementById("myInput").value;
+        const text = document.createTextNode(inputValue);
+        li.appendChild(text);
+        if (inputValue === '') {
+            alert("You must write something!");
+        } else {
+            document.getElementById("list").appendChild(li);
+        }
+        document.getElementById("myInput").value = "";
+
+        const span = document.createElement("SPAN");
+        const txt = document.createTextNode("\u00D7");
+        span.className = "close";
+        span.appendChild(txt);
+        li.appendChild(span);
+
+        for (i = 0; i < close.length; i++) {
+            close[i].onclick = () =>{
+            const div = this.parentElement;
+            div.style.display = "none";
+            }
+          }
+        }
+         const deleteChild = () =>{
+                 const parentElement = querySelector("ul");
+                 const lastchild=parentElement.lastElementChild;
+                 while(lastchild){
+                   parentElement.removeChild(lastchild);
+                   lastchild=parentElement.lastElementChild;
+                  }
+                  var btn = document.getElementById("btn").onclick = ()=>{
+          deleteChild();
+      }
+          }
+        </script>
+        
+  </body>
+</html>
