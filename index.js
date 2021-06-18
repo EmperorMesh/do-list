@@ -1,4 +1,4 @@
-const myNodelist = document.getElementsByTagName("LI");
+ const myNodelist = document.getElementsByTagName("LI");
 for (var i = 0; i < myNodelist.length; i++) {
     const span = document.createElement("SPAN");
     const txt = document.createTextNode("\u00D7");
@@ -45,4 +45,11 @@ creatElements = () => {
         }
     }
 }
+function clearAll(){
+const clear = document.getElementById("list");
+const elementChild = document.getElementsByTagName("li");
+clear.remove(elementChild);
+return clear
+}
+ 
  
