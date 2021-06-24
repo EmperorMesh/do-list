@@ -46,9 +46,8 @@ function create() {
    
 }
 function clearAll(){
-var li =document.getElementsByName('li')
+var li =document.querySelector('ul')
 var del = document.getElementById("list");
     del.remove(li);
-
 }
          
