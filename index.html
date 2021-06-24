@@ -9,20 +9,16 @@
 </head>
 <body>
 
-  <header>
-    <h3> Welcome Todo List</h3>
-  </header>
-  <div id="box" class="box1">
-    <input type="text" id="myInput" placeholder="Please Add a List"><span onclick ="creatElements()" class="addBtn"> AddList</span>
+  <header><h1>Todo app</h1></header>
+  <div class="container">
+    <input type="text" name="" id="todo" value="PLeas add a List">
+    <div class="btn" Type="submit" onclick="create()" id="addlist"><h4>Add List</h4></div>
   </div>
-  <div class="box2">
-    <ul id="list">
+  <div class='box1'>
+    <ul id="list">  
     </ul>
-    <span onclick="clearAll()" class="addbtn">CLEAR</span> <span class="addbbtn">DELETE</span>
   </div>
-  <footer>
-    copyright@2021
-  </footer>
+  <div class="btn2" id=clearAll onclick="clearAll()">ClearAll</div>
 <script src="./index.js"></script>
 </body>
 
